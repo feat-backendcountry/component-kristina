@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const morgan = require('morgan');
+const Products = require('./index.js');
 
 const app = express();
 const port = 3838;
