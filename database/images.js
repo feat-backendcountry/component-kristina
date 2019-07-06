@@ -1,131 +1,131 @@
 const shirtsUrl = [
-  'shirt1',
-  'shirt2',
-  'shirt3',
-  'shirt4',
-  'shirt5',
-  'shirt6',
-  'shirt7',
-  'shirt8',
-  'shirt9',
-  'shirt10',
-  'shirt11',
-  'shirt12',
-  'shirt13',
-  'shirt14',
-  'shirt15'
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt1.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt2.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt3.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt4.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt5.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt6.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt7.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt8.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt9.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt10.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt11.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt12.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt13.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt14.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shirt15.jpg'
 ];
 
 const pantsUrl = [
-  'pants1',
-  'pants2',
-  'pants3',
-  'pants4',
-  'pants5',
-  'pants6',
-  'pants7',
-  'pants8',
-  'pants9',
-  'pants10',
-  'pants11',
-  'pants12',
-  'pants13',
-  'pants14',
-  'pants15'
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants1.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants2.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants3.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants4.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants5.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants6.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants7.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants8.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants9.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants10.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants11.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants12.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants13.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants14.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/pants15.jpg'
 ];
 
 const clothingUrl = [
-  'clothing1',
-  'clothing2',
-  'clothing3',
-  'clothing4',
-  'clothing5',
-  'clothing6',
-  'clothing7',
-  'clothing8',
-  'clothing9',
-  'clothing10',
-  'clothing11',
-  'clothing12',
-  'clothing13',
-  'clothing14'
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing1.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing2.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing3.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing4.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing5.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing6.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing7.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing8.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing9.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing10.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing11.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing12.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing13.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/clothing14.jpg'
 ];
 
 const socksUrl = [
-  'socks1',
-  'socks2',
-  'socks3',
-  'socks4',
-  'socks5',
-  'socks6',
-  'socks7',
-  'socks8'
+  'https://backendcountry.s3-us-west-1.amazonaws.com/socks1.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/socks2.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/socks3.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/socks4.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/socks5.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/socks6.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/socks7.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/socks8.jpg'
 ];
 
 const shoesUrl = [
-  'shoes1',
-  'shoes2',
-  'shoes3',
-  'shoes4',
-  'shoes5',
-  'shoes6',
-  'shoes7',
-  'shoes8'
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shoes1.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shoes2.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shoes3.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shoes4.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shoes5.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shoes6.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shoes7.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/shoes8.jpg'
 ];
 
 const glovesUrl = [
-  'gloves1',
-  'gloves2',
-  'gloves3',
-  'gloves4',
-  'gloves5',
-  'gloves6',
-  'gloves7',
-  'gloves8'
+  'https://backendcountry.s3-us-west-1.amazonaws.com/gloves1.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/gloves2.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/gloves3.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/gloves4.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/gloves5.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/gloves6.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/gloves7.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/gloves8.jpg'
 ];
 
 const helmetsUrl = [
-  'helmets1',
-  'helmets2',
-  'helmets3',
-  'helmets4',
-  'helmets5',
-  'helmets6',
-  'helmets7',
-  'helmets8'
+  'https://backendcountry.s3-us-west-1.amazonaws.com/helmet1.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/helmet2.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/helmet3.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/helmet4.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/helmet5.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/helmet6.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/helmet7.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/helmet8.jpg'
 ];
 
 const backpacksUrl = [
-  'backpacks1',
-  'backpacks2',
-  'backpacks3',
-  'backpacks4',
-  'backpacks5',
-  'backpacks6',
-  'backpacks7',
-  'backpacks8'
+  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack1.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack2.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack3.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack4.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack5.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack6.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack7.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack8.jpg'
 ];
 
 const jacketsUrl = [
-  'jackets1',
-  'jackets2',
-  'jackets3',
-  'jackets4',
-  'jackets5',
-  'jackets6',
-  'jackets7',
-  'jackets8'
+  'https://backendcountry.s3-us-west-1.amazonaws.com/jacket1.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/jacket2.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/jacket3.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/jacket4.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/jacket5.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/jacket6.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/jacket7.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/jacket8.jpg'
 ];
 
 const hoodiesUrl = [
-  'hoodies1',
-  'hoodies2',
-  'hoodies3',
-  'hoodies4',
-  'hoodies5',
-  'hoodies6',
-  'hoodies7',
-  'hoodies8'
+  'https://backendcountry.s3-us-west-1.amazonaws.com/hoodie1.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/hoodie2.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/hoodie3.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/hoodie4.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/hoodie5.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/hoodie6.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/hoodie7.jpg',
+  'https://backendcountry.s3-us-west-1.amazonaws.com/hoodie8.jpg'
 ];
 
 const productTypes = {
