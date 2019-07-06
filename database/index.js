@@ -13,9 +13,8 @@ const productsSchema = mongoose.Schema({
   id: { type: Number, require: true },
   name: { type: String, require: true },
   url: { type: String, require: true },
-  // childCategory: { type: String, require: true},
-  // parentCategory: { type: String, require: true},
-  category: { type: String, require: true },
+  childCategory: { type: String, require: true},
+  parentCategory: { type: String, require: true},
   productType: { type: String, require: true },
   brand: { type: String, require: true }
 });
