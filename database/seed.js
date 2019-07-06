@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 const Product = require('./index.js');
+const productTypes = require('./images.js');
 
-var productTypes = require('./images.js');
-
-var descriptions = [
+const descriptions = [
   'Atlantic TLS3',
   'Icelandic ',
   'Wilshire',
@@ -39,28 +38,35 @@ var descriptions = [
   'ICIC',
   'Vita Versus',
   'Raven',
-  'Norwalk'
+  'Norwalk',
+  'Soksabai',
+  'KeOokke',
+  'Sahoa',
+  'Menten',
+  'Loy',
+  'Chommai',
+  'Vie',
+  'LooLen',
+  'Lenkeem'
 ];
 
-var categories = [
-  'Men\'s Clothing',
+const parentCategories = [
   'Women\'s Clothing',
-  'Men\'s Accessories',
   'Women\'s Accessories',
+  'Men\'s Clothing',
+  'Men\'s Accessories'
+];
+
+const childCategories = [
   'Bike',
   'Ski',
   'Snowboard',
+  'Camping',
   'Baselayers'
 ];
 
-// var childCategories = [
-//   'Bike',
-//   'Ski',
-//   'Snowboard',
-//   'Baselayers'
-// ];
 
-var brands = [
+const brands = [
   'Arc\'teryx',
   'Black Diamond',
   'Backcountry',
@@ -74,32 +80,34 @@ var brands = [
   'The North Face'
 ];
 
-var seedData = [];
+const seedData = [];
 
-var returnRandomIndex = (length) => {
+const returnRandomIndex = (length) => {
   return Math.floor(Math.random() * length);
 }
 
-var buildSeedData = (productTypes) => {
+const buildSeedData = (productTypes) => {
 
-  var makeItemEntries = (item, itemUrls) => {
-    for (var i = 0; i < itemUrls.length; i++) {
-      var entry = {};
-      // var nameExtension = '';
+  const makeItemEntries = (item, itemUrls) => {
+    for (let i = 0; i < itemUrls.length; i++) {
+      let entry = {};
 
       productType = `${item.toLowerCase()}s`;
-      category = categories[returnRandomIndex(categories.length - 1)];
-      // childCategory = childCategories[returnRandomIndex(childCategories.length - 1)]
+      childCategory = childCategories[returnRandomIndex(childCategories.length - 1)];
       brand = brands[returnRandomIndex(brands.length - 1)];
-      // nameExtension = category.split(' ')[0];
       description = descriptions[returnRandomIndex(descriptions.length - 1)];
 
+      if (i <= Math.floor(itemUrls.length / 2)) {
+        parentCategory = parentCategories[returnRandomIndex(parentCategories.length / 2)];
+      } else {
+        parentCategory = parentCategories[returnRandomIndex(parentCategories.length / 2) + parentCategories.length / 2]
+      }
+
       entry.id = id;
-      // entry.name = `${description} ${item} - ${nameExtension}`;
       entry.name = `${description} ${item}`;
       entry.url = itemUrls[i];
-      // entry.childCategory = childCategory;
-      entry.category = category;
+      entry.parentCategory = parentCategory;
+      entry.childCategory = childCategory;
       entry.productType = productType
       entry.brand = brand;
 
@@ -108,9 +116,9 @@ var buildSeedData = (productTypes) => {
     }
   }
 
-  var id = 1;
-  var keys = Object.keys(productTypes);
-  for (var i = 0; i < keys.length; i++) {
+  let id = 1;
+  let keys = Object.keys(productTypes);
+  for (let i = 0; i < keys.length; i++) {
     makeItemEntries(keys[i], productTypes[keys[i]]);
   }
 }
@@ -127,4 +135,3 @@ const seedFunction = () => {
 
 buildSeedData(productTypes);
 seedFunction();
-// console.log(seedData);
