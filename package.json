@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "[feat] backEndCountry()",
   "version": "",
-  "description": "",
-  "author": "",
+  "description": "Backcountry.com navigation bar replica",
+  "author": "Kristina Taing",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
