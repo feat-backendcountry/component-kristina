@@ -92,10 +92,10 @@ const buildSeedData = (productTypes) => {
     for (let i = 0; i < itemUrls.length; i++) {
       let entry = {};
 
-      productType = `${item.toLowerCase()}s`;
-      childCategory = childCategories[returnRandomIndex(childCategories.length - 1)];
-      brand = brands[returnRandomIndex(brands.length - 1)];
-      description = descriptions[returnRandomIndex(descriptions.length - 1)];
+      let productType = `${item.toLowerCase()}s`;
+      let childCategory = childCategories[returnRandomIndex(childCategories.length - 1)];
+      let brand = brands[returnRandomIndex(brands.length - 1)];
+      let description = descriptions[returnRandomIndex(descriptions.length - 1)];
 
       if (i <= Math.floor(itemUrls.length / 2)) {
         parentCategory = parentCategories[returnRandomIndex(parentCategories.length / 2)];
