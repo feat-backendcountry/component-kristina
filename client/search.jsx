@@ -12,8 +12,9 @@ class Search extends React.Component {
   render() {
     return (
       <div id='search-bar'>
-        <span> | Company LOGO | </span>
-        <span>Backcountry</span>
+        <span id='company-logo'>
+          <img id='company-logo-image' src='https://i.imgur.com/cRnLYYM.png' alt='company logo'/>
+        </span>
         <input id='search-input' placeholder='Search gear & clothing'></input>
         <span> | Chat-LOGO | </span>
         <span>Chat</span>
@@ -23,7 +24,6 @@ class Search extends React.Component {
         <span>Image</span>
         <span> | CART LOGO | </span>
       </div>
-
     )
   }
 };
