@@ -1,6 +1,6 @@
 import React from 'react';
-import Menu from './menu.jsx';
-import Search from './search.jsx';
+import MenuBar from './menu-bar.jsx';
+import MainBar from './main-bar.jsx';
 import HoverNewArrivals from './hover-newarrivals.jsx';
 import HoverBrands from './hover-brands.jsx';
 import HoverWomen from './hover-women.jsx';
@@ -20,11 +20,11 @@ class App extends React.Component {
   render() {
     return (
       <div id='nav-bar'>
-        <div id='shipping-bar'>
+        <section id='shipping-bar'>
           <a id='shipping-text' href='localhost:3838'>Free 2-Day Shipping on Orders Over $50</a>
-        </div>
-        <Search />
-        <Menu />
+        </section>
+        <MainBar />
+        <MenuBar />
         <HoverNewArrivals />
         <HoverBrands />
         <HoverWomen />
