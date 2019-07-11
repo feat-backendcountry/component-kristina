@@ -3,6 +3,7 @@ import MenuBar from './menu-bar.jsx';
 import MainBar from './main-bar.jsx';
 import HoverNewArrivals from './hover-newarrivals.jsx';
 import HoverBrands from './hover-brands.jsx';
+import HoverActivities from './hover-activities.jsx';
 import HoverWomen from './hover-women.jsx';
 import HoverMen from './hover-men.jsx';
 import HoverKids from './hover-kids.jsx';
@@ -27,6 +28,7 @@ class App extends React.Component {
         <MenuBar />
         <HoverNewArrivals />
         <HoverBrands />
+        <HoverActivities />
         <HoverWomen />
         <HoverMen />
         <HoverKids />

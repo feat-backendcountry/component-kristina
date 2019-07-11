@@ -17,20 +17,20 @@ class HoverWomen extends React.Component {
   render() {
     const keys = Object.keys(this.state.women);
     return (
-      <div id='hover-women'>
+      <section id='hover-women'>
         {keys.map((category, key) => {
           return (
-            <span className='women-item' key={key}>
-              <div className='women-category'>{category}</div>
+            <div id={'container-' + key} className='category-container' key={key}>
+              <span className='category-name'>{category}</span>
               {this.state.women[category].map((subcategory, key) => {
                 return(
-                  <div key={key}>{subcategory}</div>
+                  <span className='category-item' key={key}>{subcategory}</span>
                 )
               })}
-            </span>
+            </div>
           )
         })}
-      </div>
+      </section>
 
     )
   }

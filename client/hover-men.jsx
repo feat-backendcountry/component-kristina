@@ -17,20 +17,20 @@ class HoverMen extends React.Component {
   render() {
     const keys = Object.keys(this.state.men);
     return (
-      <div id='hover-men'>
+      <section id='hover-men'>
         {keys.map((category, key) => {
           return (
-            <span className='men-item' key={key}>
-              <div className='men-category'>{category}</div>
+            <div id={'container-' + key} className='category-container' key={key}>
+              <span className='category-name'>{category}</span>
               {this.state.men[category].map((subcategory, key) => {
                 return(
-                  <div key={key}>{subcategory}</div>
+                  <span className='category-item' key={key}>{subcategory}</span>
                 )
               })}
-            </span>
+            </div>
           )
         })}
-      </div>
+      </section>
 
     )
   }

@@ -14,7 +14,7 @@ class MainBar extends React.Component {
       <section id='main-bar'>
         {/* Company Logo */}
         <div id='company-logo-container'>
-          <img id='company-logo-image' src='https://i.imgur.com/cRnLYYM.png' alt='company logo' />
+          <img id='company-logo-image' src='https://i.imgur.com/KSGQ4Du.png' alt='company logo' />
         </div>
         {/* Search */}
         <div id='search-container'>

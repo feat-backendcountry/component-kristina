@@ -17,20 +17,25 @@ class HoverNewArrivals extends React.Component {
   render() {
     const keys = Object.keys(this.state.newArrivals);
     return (
-      <div id='hover-new-arrivals'>
+      <section id='hover-new-arrivals'>
         {keys.map((category, key) => {
           return (
-            <span className='new-arrivals-item' key={key}>
-              <div className='new-arrivals-category'>{category}</div>
+            <div id={'container-' + key} className='category-container' key={key}>
+              <span className='category-name'>{category}</span>
               {this.state.newArrivals[category].map((subcategory, key) => {
                 return(
-                  <div key={key}>{subcategory}</div>
+                  <span className='category-item' key={key}>{subcategory}</span>
                 )
               })}
-            </span>
+            </div>
           )
         })}
-      </div>
+        <div id='seasonal-ad'>
+          <img className='ad-photo' src='https://i.imgur.com/faEL4yU.jpg' alt='camping photo'></img>
+          <span className='ad-small-text'>Special Summer Collection</span>
+          <span className='ad-large-text'>Retro-Inspired Camping Gear</span>
+        </div>
+      </section>
 
     )
   }
