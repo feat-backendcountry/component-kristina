@@ -12,7 +12,7 @@ class HoverActivities extends React.Component {
 
   render() {
     return (
-      <section id='hover-activities'>
+      <section className='hover-activities hover'>
           {this.state.mainActivities.map((activity, key) => {
             return (
               <span className='activity-container' key={key}>

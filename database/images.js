@@ -96,14 +96,23 @@ const helmetsUrl = [
 ];
 
 const backpacksUrl = [
-  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack1.jpg',
-  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack2.jpg',
-  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack3.jpg',
-  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack4.jpg',
-  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack5.jpg',
-  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack6.jpg',
-  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack7.jpg',
-  'https://backendcountry.s3-us-west-1.amazonaws.com/backpack8.jpg'
+  'https://imgur.com/WrKfnaW',
+  'https://imgur.com/zkjDEVw',
+  'https://imgur.com/VR9OuUQ',
+  'https://imgur.com/yKOU05m',
+  'https://imgur.com/pgpLtZK',
+  'https://imgur.com/FqtY0wS',
+  'https://imgur.com/dJJvi4X',
+  'https://imgur.com/upJLQtg'
+
+  // 'https://backendcountry.s3-us-west-1.amazonaws.com/backpack1.jpg',
+  // 'https://backendcountry.s3-us-west-1.amazonaws.com/backpack2.jpg',
+  // 'https://backendcountry.s3-us-west-1.amazonaws.com/backpack3.jpg',
+  // 'https://backendcountry.s3-us-west-1.amazonaws.com/backpack4.jpg',
+  // 'https://backendcountry.s3-us-west-1.amazonaws.com/backpack5.jpg',
+  // 'https://backendcountry.s3-us-west-1.amazonaws.com/backpack6.jpg',
+  // 'https://backendcountry.s3-us-west-1.amazonaws.com/backpack7.jpg',
+  // 'https://backendcountry.s3-us-west-1.amazonaws.com/backpack8.jpg'
 ];
 
 const jacketsUrl = [
