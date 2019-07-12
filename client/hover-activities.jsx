@@ -22,6 +22,9 @@ class HoverActivities extends React.Component {
               </span>
             )
           })}
+        <div className='separator-container'>
+          <span className='separator'></span>
+        </div>
         <div className='other-activities-container'>
           {this.state.otherActivities.map((activity, key) => {
             return(
