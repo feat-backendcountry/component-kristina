@@ -4,7 +4,7 @@
   ========================================
 */
 
-#nav-bar {
+.nav-bar {
   display: block;
   color: #000;
   font: 16px/22px "AktivGrotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -17,14 +17,14 @@
   ========================================
 */
 
-#shipping-bar {
+.shipping-bar {
   background-color:#DDC9A3;
   height: 33px;
   position: relative;
   text-align: center;
 }
 
-#shipping-text {
+.shipping-text {
   display: inline-block;
   color: #222;
   font-size: 12px;
@@ -41,7 +41,7 @@
   ========================================
 */
 
-#main-bar {
+.main-bar {
   display: block;
   font-size: 12px;
   height: 80px;
@@ -53,7 +53,7 @@
   ----------------------------------------
 */
 
-#company-logo-container {
+.company-logo-container {
   display: inline-block;
   height: 80px;
   width: 200px;
@@ -61,7 +61,7 @@
   margin-inline-start: 90px;
 }
 
-#company-logo-image {
+.company-logo-image {
   display: inline-block;
   width: 175px;
   padding-right: 5px;
@@ -78,14 +78,14 @@
   ----------------------------------------
 */
 
-#search-container {
+.search-container {
   display: inline-block;
   height: 80px;
   width: 49%;
   vertical-align: top;
 }
 
-#search-bar {
+.search-bar {
   display: inline-block;
   height: 30px;
   width: 660px;
@@ -97,7 +97,7 @@
   border-radius: 30px;
 }
 
-#search-button {
+.search-button {
   display: inline-block;
   /* vertical-align: bottom; */
   /* position: relative; */
@@ -111,20 +111,20 @@
   cursor: pointer;
 }
 
-#search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #FFF;
   opacity: 1; /* Firefox */
 }
 
-#search-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.search-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: #FFF;
 }
 
-#search-input::-ms-input-placeholder { /* Microsoft Edge */
+.search-input::-ms-input-placeholder { /* Microsoft Edge */
   color: #FFF;
 }
 
-#search-input {
+.search-input {
   display: inline-block;
   width: 650px;
   max-width: 95%;
@@ -141,7 +141,7 @@
   ----------------------------------------
 */
 
-#chat-container {
+.chat-container {
   display: inline-block;
   height: 80px;
   width: 112px;
@@ -150,26 +150,26 @@
   cursor: pointer;
 }
 
-#chat-icon {
+.chat-icon {
   display: inline-block;
   height: 18px;
   margin-top: 30px;
   padding-right: 5px;
 }
 
-#phone-container {
+.phone-container {
   display: inline-block;
   height: 80px;
   width: 125px;
 }
 
-#phone-icon {
+.phone-icon {
   display: inline-block;
   height: 12px;
   padding-right: 10px;
 }
 
-#phone-text {
+.phone-text {
   display: inline-block;
   margin-top: 35px;
 }
@@ -180,13 +180,13 @@
   ----------------------------------------
 */
 
-#login-container {
+.login-container {
   display: inline-block;
   height: 80px;
   vertical-align: top;
 }
 
-#login-text {
+.login-text {
   display: inline-block;
   width: 140px;
   margin-top: 35px;
@@ -195,7 +195,7 @@
   cursor: pointer;
 }
 
-#avatar-icon {
+.avatar-icon {
   display: inline-block;
   margin-inline-start: 5px;
   margin-inline-end: 5px;
@@ -211,14 +211,14 @@
   ----------------------------------------
 */
 
-#checkout-container {
+.checkout-container {
   display: inline-block;
   height: 80px;
   width: 50px;
   vertical-align: bottom;
 }
 
-#cart-icon {
+.cart-icon {
   display: inline-block;
   vertical-align: bottom;
   height: 15px;
@@ -494,13 +494,13 @@
   ========================================
 */
 
-#sale-bar {
+.sale-bar {
   background-color:#000;
   padding: 17px;
   cursor: pointer;
 }
 
-#sale-text1 {
+.sale-text1 {
   display: block;
   color: #FFF;
   font-size: 16px;
@@ -509,6 +509,6 @@
   text-decoration: none;
 }
 
-#sale-text2 {
+.sale-text2 {
   font-weight: 500;
 }
