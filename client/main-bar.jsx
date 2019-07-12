@@ -11,36 +11,36 @@ class MainBar extends React.Component {
 
   render() {
     return (
-      <section id='main-bar'>
+      <section className='main-bar'>
         {/* Company Logo */}
-        <div id='company-logo-container'>
-          <img id='company-logo-image' src='https://i.imgur.com/KSGQ4Du.png' alt='company logo' />
+        <div className='company-logo-container'>
+          <img className='company-logo-image' src='https://i.imgur.com/KSGQ4Du.png' alt='company logo' />
         </div>
         {/* Search */}
-        <div id='search-container'>
-          <span id='search-bar'>
-            <button id='search-button'></button>
-            <input id='search-input' placeholder='Search gear & clothing'></input>
+        <div className='search-container'>
+          <span className='search-bar'>
+            <button className='search-button'></button>
+            <input className='search-input' placeholder='Search gear & clothing'></input>
           </span>
         </div>
         {/* Chat */}
-        <div id='chat-container'>
-          <img id='chat-icon' src='https://i.imgur.com/RBbMWxB.png' alt='chat icon' />
+        <div className='chat-container'>
+          <img className='chat-icon' src='https://i.imgur.com/RBbMWxB.png' alt='chat icon' />
           <span>Chat</span>
         </div>
         {/* Phone */}
-        <div id='phone-container'>
-          <img id='phone-icon' src='https://i.imgur.com/5OXksuV.png' alt='phone icon' />
-          <span id='phone-text'>1-800-409-4502</span>
+        <div className='phone-container'>
+          <img className='phone-icon' src='https://i.imgur.com/5OXksuV.png' alt='phone icon' />
+          <span className='phone-text'>1-800-409-4502</span>
         </div>
         {/* Login */}
-        <div id='login-container'>
-          <span id='login-text'>My Account</span>
-          <img id='avatar-icon' src='https://i.imgur.com/Gwo5Cto.jpg' alt='user avatar'></img>
+        <div className='login-container'>
+          <span className='login-text'>My Account</span>
+          <img className='avatar-icon' src='https://i.imgur.com/Gwo5Cto.jpg' alt='user avatar'></img>
         </div>
         {/* Checkout */}
-        <div id='checkout-container'>
-          <img id='cart-icon' src='https://i.imgur.com/XbqZWjn.png' alt='cart icon' />
+        <div className='checkout-container'>
+          <img className='cart-icon' src='https://i.imgur.com/XbqZWjn.png' alt='cart icon' />
         </div>
       </section>
     )
