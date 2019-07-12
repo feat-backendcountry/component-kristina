@@ -21,10 +21,11 @@ class App extends React.Component {
         <MenuBar />
         <div className='sale-bar'>
           <a className='sale-text1' href='localhost:3838'>
-            <span className='sale-text2'>Savings on Backcountry-Built Gear & Apparel </span>
-            Up to 30% Off Select Styles for Summer
+            <span className='sale-text2'>Go Seek </span>
+            How Kids Find Their Backcountry
           </a>
         </div>
+        <div className='app'>REST OF WEB PAGE</div>
       </div>
     )
   }
