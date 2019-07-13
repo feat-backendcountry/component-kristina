@@ -270,14 +270,16 @@
   position: absolute;
   top: 173px;
   left: 0px;
+  text-align: left;
+  padding-block-end: 30px;
   /* height: 425px; */
   /* margin-inline-start: 360px; */
 }
 
 .hover-brands {
   display: none;
-  width:100vw;
-  font-size: 11px;
+  width: 100%;
+  font-size: 12px;
   text-align: center;
   border-top: 1px solid;
   border-color:	#C8C8C8;
@@ -288,18 +290,25 @@
   display: none;
   font-size: 14px;
   height: 270px;
-  width:100vw;
+  /* height: 0px; */
+  width: 100%;
   text-align: center;
   color: #666;
   border-top: 1px solid;
   border-color:	#C8C8C8;
   position: absolute;
+  /* transition: height 3s ease; */
+  /* transition: all 5s ease-in-out; */
+  /* transition: all .5s ease-in-out; */
 
 }
 
 .new-arrivals:hover > .hover-new-arrivals {
   display: block;
-  float: left;
+  /* -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease; */
+  /* height: 270px; */
+
 }
 .brands:hover > .hover-brands {
   display: block;
@@ -320,16 +329,20 @@
   display: block;
 }
 
+.app {
+  box-shadow: inset 0 0 0 150vw rgba(0,0,0,0.5);
+  height: 800px;
+}
+
 /*
   ----------------------------------------
   Hover New Arrivals, Women, Men, Kids, & Sale Section - Pending
   ----------------------------------------
 */
 
-/* .container-0 {
+.container-0 {
   margin-inline-start: 340px;
-  position: absolute;
-} */
+}
 
 .category-container {
   display: inline-block;
@@ -357,7 +370,6 @@
   width: 160px;
   max-width: 95%;
   font-size: 12px;
-  /* line-height: 0px; */
   text-align: left;
   cursor: pointer;
 }
@@ -390,7 +402,8 @@
 
 .ad-large-text {
   display: inline-block;
-  font: 26px"CaslonGraphique", serif, sans-serif;
+  font: 26px "CaslonGraphique", serif, sans-serif;
+  -webkit-font-smoothing: antialiased;
   font-weight: 800;
   color: #222;
   width: 250px;
@@ -404,14 +417,20 @@
 */
 
 .brands-header {
-  padding: 10px;
+  margin-top:25px;
+  color: #222;
 }
 
 .brands-item {
   display: inline-block;
-  padding: 8px;
-  color: gray;
+  margin-top: 30px;
+  padding: 0px 11px;
+  color: #666;
   cursor: pointer;
+}
+
+.brands-item:hover {
+  color: #222;
 }
 
 /*
@@ -471,9 +490,23 @@
   color: #FFF;
 }
 
+.separator-container {
+  display: block;
+  text-align: center;
+}
+
+.separator {
+  display: inline-block;
+  width: 100px;
+  height: 2px;
+  margin-top: 40px;
+  background-color:	#F0F0F0;
+  border-radius: 3px;
+}
+
 .other-activities-container {
   display: block;
-  margin-top: 65px;
+  margin-top: 25px;
 }
 
 .other-activity-item {
@@ -495,7 +528,9 @@
 */
 
 .sale-bar {
-  background-color:#000;
+  background: url(https://i.imgur.com/f5Z12ND.jpg);
+  background-size: cover;
+  background-position-y: -780px;
   padding: 17px;
   cursor: pointer;
 }
@@ -503,12 +538,12 @@
 .sale-text1 {
   display: block;
   color: #FFF;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 350;
   text-align: center;
   text-decoration: none;
 }
 
 .sale-text2 {
-  font-weight: 500;
+  font-weight: 600;
 }
