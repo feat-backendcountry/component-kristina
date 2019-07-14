@@ -1,13 +1,50 @@
 import React from 'react';
+import SearchResult from './search-results.jsx';
+import axios from 'axios';
 
 class MainBar extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      test: ''
+      query: '',
+      result: []
     };
+    this.handleOnChange = this.handleOnChange.bind(this);
   };
+
+  handleOnChange(e) {
+    this.setState({
+      query: e.target.value
+    }, () => {
+      // this.get()
+    })
+  }
+
+  get() {
+    axios
+      .get('/products/all')
+      .then(({data}) => {
+        this.setState({
+          result: data
+        }, () => console.log(data))
+      })
+      .catch(() => {
+        console.error('Not able to find search result');
+      })
+  }
+
+  displaySearch() {
+    if (this.state.query.length >= 2) {
+      return (
+        <SearchResult query={this.state.query} result={this.state.result}/>
+      )
+    }
+  }
+
+  componentDidMount() {
+    this.get();
+  }
 
   render() {
     return (
@@ -20,7 +57,7 @@ class MainBar extends React.Component {
         <div className='search-container'>
           <span className='search-bar'>
             <button className='search-button'></button>
-            <input className='search-input' placeholder='Search gear & clothing'></input>
+            <input className='search-input' placeholder='Search gear & clothing' onChange={this.handleOnChange}></input>
           </span>
         </div>
         {/* Chat */}
@@ -42,6 +79,7 @@ class MainBar extends React.Component {
         <div className='checkout-container'>
           <img className='cart-icon' src='https://i.imgur.com/XbqZWjn.png' alt='cart icon' />
         </div>
+        {this.displaySearch()}
       </section>
     )
   }
