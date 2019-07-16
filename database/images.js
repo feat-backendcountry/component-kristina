@@ -1,132 +1,132 @@
 const shirtsUrl = [
-  'https://i.imgur.com/66g1AF7',
-  'https://i.imgur.com/MTEQl4Q',
-  'https://i.imgur.com/ALA2CYW',
-  'https://i.imgur.com/YK2OfyU',
-  'https://i.imgur.com/QFI1TYu',
-  'https://i.imgur.com/HWBhYjw',
-  'https://i.imgur.com/qubhncE',
-  'https://i.imgur.com/hGa0sag',
-  'https://i.imgur.com/AqLSdoW',
-  'https://i.imgur.com/T6wKyYX',
-  'https://i.imgur.com/GwqDMWl',
-  'https://i.imgur.com/lGge9a1',
-  'https://i.imgur.com/ktZd9GK',
-  'https://i.imgur.com/Vr7r92E',
-  'https://i.imgur.com/DDeJwhG'
+  'https://i.imgur.com/66g1AF7.jpg',
+  'https://i.imgur.com/MTEQl4Q.jpg',
+  'https://i.imgur.com/ALA2CYW.jpg',
+  'https://i.imgur.com/YK2OfyU.jpg',
+  'https://i.imgur.com/QFI1TYu.jpg',
+  'https://i.imgur.com/HWBhYjw.jpg',
+  'https://i.imgur.com/qubhncE.jpg',
+  'https://i.imgur.com/hGa0sag.jpg',
+  'https://i.imgur.com/AqLSdoW.jpg',
+  'https://i.imgur.com/T6wKyYX.jpg',
+  'https://i.imgur.com/GwqDMWl.jpg',
+  'https://i.imgur.com/lGge9a1.jpg',
+  'https://i.imgur.com/ktZd9GK.jpg',
+  'https://i.imgur.com/Vr7r92E.jpg',
+  'https://i.imgur.com/DDeJwhG.jpg'
 ];
 
 const pantsUrl = [
-  'https://i.imgur.com/Vx9rlLO',
-  'https://i.imgur.com/1vmFxkk',
-  'https://i.imgur.com/y52yG38',
-  'https://i.imgur.com/wpQJUBr',
-  'https://i.imgur.com/XSIePrF',
-  'https://i.imgur.com/lNHuHRU',
-  'https://i.imgur.com/syKGLjN',
-  'https://i.imgur.com/2svkIxP',
-  'https://i.imgur.com/3uHDhU1',
-  'https://i.imgur.com/h1jC39U',
-  'https://i.imgur.com/vgGKBCc',
-  'https://i.imgur.com/fiBtfls',
-  'https://i.imgur.com/R0XzOUC',
-  'https://i.imgur.com/VWfnn4O',
-  'https://i.imgur.com/2HDMpdh'
+  'https://i.imgur.com/Vx9rlLO.jpg',
+  'https://i.imgur.com/1vmFxkk.jpg',
+  'https://i.imgur.com/y52yG38.jpg',
+  'https://i.imgur.com/wpQJUBr.jpg',
+  'https://i.imgur.com/XSIePrF.jpg',
+  'https://i.imgur.com/lNHuHRU.jpg',
+  'https://i.imgur.com/syKGLjN.jpg',
+  'https://i.imgur.com/2svkIxP.jpg',
+  'https://i.imgur.com/3uHDhU1.jpg',
+  'https://i.imgur.com/h1jC39U.jpg',
+  'https://i.imgur.com/vgGKBCc.jpg',
+  'https://i.imgur.com/fiBtfls.jpg',
+  'https://i.imgur.com/R0XzOUC.jpg',
+  'https://i.imgur.com/VWfnn4O.jpg',
+  'https://i.imgur.com/2HDMpdh.jpg'
 ];
 
 const clothingUrl = [
-  'https://i.imgur.com/G8oOmOF',
-  'https://i.imgur.com/hJZdwhU',
-  'https://i.imgur.com/jQQyOs9',
-  'https://i.imgur.com/eRjoBZI',
-  'https://i.imgur.com/EbASmbU',
-  'https://i.imgur.com/AginVmB',
-  'https://i.imgur.com/01Vsano',
-  'https://i.imgur.com/eNlIaQQ',
-  'https://i.imgur.com/WoeiOUe',
-  'https://i.imgur.com/rTLaOn6',
-  'https://i.imgur.com/hE5cOec',
-  'https://i.imgur.com/WKPIb8z',
-  'https://i.imgur.com/n0ZxROZ',
-  'https://i.imgur.com/XWZVzst'
-  //i. 'https://i.imgur.com/5pQwbVJ'
+  'https://i.imgur.com/G8oOmOF.jpg',
+  'https://i.imgur.com/hJZdwhU.jpg',
+  'https://i.imgur.com/jQQyOs9.jpg',
+  'https://i.imgur.com/eRjoBZI.jpg',
+  'https://i.imgur.com/EbASmbU.jpg',
+  'https://i.imgur.com/AginVmB.jpg',
+  'https://i.imgur.com/01Vsano.jpg',
+  'https://i.imgur.com/eNlIaQQ.jpg',
+  'https://i.imgur.com/WoeiOUe.jpg',
+  'https://i.imgur.com/rTLaOn6.jpg',
+  'https://i.imgur.com/hE5cOec.jpg',
+  'https://i.imgur.com/WKPIb8z.jpg',
+  'https://i.imgur.com/n0ZxROZ.jpg',
+  'https://i.imgur.com/XWZVzst.jpg'
+  //i. 'https://i.imgur.com/5pQwbVJ.jpg'
 ];
 
 const socksUrl = [
-  'https://i.imgur.com/f9yVkZr',
-  'https://i.imgur.com/Zry4Qo8',
-  'https://i.imgur.com/KtDGCcZ',
-  'https://i.imgur.com/byKblGQ',
-  'https://i.imgur.com/rfmrmTy',
-  'https://i.imgur.com/va9fJP9',
-  'https://i.imgur.com/CX53vD1',
-  'https://i.imgur.com/bJhvvaV'
+  'https://i.imgur.com/f9yVkZr.jpg',
+  'https://i.imgur.com/Zry4Qo8.jpg',
+  'https://i.imgur.com/KtDGCcZ.jpg',
+  'https://i.imgur.com/byKblGQ.jpg',
+  'https://i.imgur.com/rfmrmTy.jpg',
+  'https://i.imgur.com/va9fJP9.jpg',
+  'https://i.imgur.com/CX53vD1.jpg',
+  'https://i.imgur.com/bJhvvaV.jpg'
 ];
 
 const shoesUrl = [
-  'https://i.imgur.com/L7sAF0H',
-  'https://i.imgur.com/PtztcXp',
-  'https://i.imgur.com/SDOKG8A',
-  'https://i.imgur.com/WBowLBc',
-  'https://i.imgur.com/y2IrQ40',
-  'https://i.imgur.com/wIMt5Gn',
-  'https://i.imgur.com/FUFLlMN',
-  'https://i.imgur.com/zyhOrvW'
+  'https://i.imgur.com/L7sAF0H.jpg',
+  'https://i.imgur.com/PtztcXp.jpg',
+  'https://i.imgur.com/SDOKG8A.jpg',
+  'https://i.imgur.com/WBowLBc.jpg',
+  'https://i.imgur.com/y2IrQ40.jpg',
+  'https://i.imgur.com/wIMt5Gn.jpg',
+  'https://i.imgur.com/FUFLlMN.jpg',
+  'https://i.imgur.com/zyhOrvW.jpg'
 ];
 
 const glovesUrl = [
-  'https://i.imgur.com/RN6FP2m',
-  'https://i.imgur.com/BooGFoS',
-  'https://i.imgur.com/TPXmqr6',
-  'https://i.imgur.com/02ZbM3j',
-  'https://i.imgur.com/No82NjV',
-  'https://i.imgur.com/At40Nve',
-  'https://i.imgur.com/76jSsMv',
-  'https://i.imgur.com/SS2byeR'
+  'https://i.imgur.com/RN6FP2m.jpg',
+  'https://i.imgur.com/BooGFoS.jpg',
+  'https://i.imgur.com/TPXmqr6.jpg',
+  'https://i.imgur.com/02ZbM3j.jpg',
+  'https://i.imgur.com/No82NjV.jpg',
+  'https://i.imgur.com/At40Nve.jpg',
+  'https://i.imgur.com/76jSsMv.jpg',
+  'https://i.imgur.com/SS2byeR.jpg'
 ];
 
 const helmetsUrl = [
-  'https://i.imgur.com/fw17ITg',
-  'https://i.imgur.com/DnMEIlU',
-  'https://i.imgur.com/yHKWbkr',
-  'https://i.imgur.com/Sx0mpj5',
-  'https://i.imgur.com/8DQgGjm',
-  'https://i.imgur.com/nxzTngn',
-  'https://i.imgur.com/s9ZJYv2',
-  'https://i.imgur.com/SXXqMqi'
+  'https://i.imgur.com/fw17ITg.jpg',
+  'https://i.imgur.com/DnMEIlU.jpg',
+  'https://i.imgur.com/yHKWbkr.jpg',
+  'https://i.imgur.com/Sx0mpj5.jpg',
+  'https://i.imgur.com/8DQgGjm.jpg',
+  'https://i.imgur.com/nxzTngn.jpg',
+  'https://i.imgur.com/s9ZJYv2.jpg',
+  'https://i.imgur.com/SXXqMqi.jpg'
 ];
 
 const backpacksUrl = [
-  'https://i.imgur.com/WrKfnaW',
-  'https://i.imgur.com/zkjDEVw',
-  'https://i.imgur.com/VR9OuUQ',
-  'https://i.imgur.com/yKOU05m',
-  'https://i.imgur.com/pgpLtZK',
-  'https://i.imgur.com/FqtY0wS',
-  'https://i.imgur.com/dJJvi4X',
-  'https://i.imgur.com/upJLQtg'
+  'https://i.imgur.com/WrKfnaW.jpg',
+  'https://i.imgur.com/zkjDEVw.jpg',
+  'https://i.imgur.com/VR9OuUQ.jpg',
+  'https://i.imgur.com/yKOU05m.jpg',
+  'https://i.imgur.com/pgpLtZK.jpg',
+  'https://i.imgur.com/FqtY0wS.jpg',
+  'https://i.imgur.com/dJJvi4X.jpg',
+  'https://i.imgur.com/upJLQtg.jpg'
 ];
 
 const jacketsUrl = [
-  'https://i.imgur.com/QoAT8LD',
-  'https://i.imgur.com/5cgWc1F',
-  'https://i.imgur.com/obCpGp2',
-  'https://i.imgur.com/A4iNfNP',
-  'https://i.imgur.com/jUjgWnq',
-  'https://i.imgur.com/Vrb6ETN',
-  'https://i.imgur.com/gmFUygY',
-  'https://i.imgur.com/DLhOiNB'
+  'https://i.imgur.com/QoAT8LD.jpg',
+  'https://i.imgur.com/5cgWc1F.jpg',
+  'https://i.imgur.com/obCpGp2.jpg',
+  'https://i.imgur.com/A4iNfNP.jpg',
+  'https://i.imgur.com/jUjgWnq.jpg',
+  'https://i.imgur.com/Vrb6ETN.jpg',
+  'https://i.imgur.com/gmFUygY.jpg',
+  'https://i.imgur.com/DLhOiNB.jpg'
 ];
 
 const hoodiesUrl = [
-  'https://i.imgur.com/QK2ejSN',
-  'https://i.imgur.com/3hLuBhG',
-  'https://i.imgur.com/wPptOrp',
-  'https://i.imgur.com/Jzcrj2S',
-  'https://i.imgur.com/qQaUzUj',
-  'https://i.imgur.com/7bvRKaj',
-  'https://i.imgur.com/elZXU7g',
-  'https://i.imgur.com/oVIVqYw'
+  'https://i.imgur.com/QK2ejSN.jpg',
+  'https://i.imgur.com/3hLuBhG.jpg',
+  'https://i.imgur.com/wPptOrp.jpg',
+  'https://i.imgur.com/Jzcrj2S.jpg',
+  'https://i.imgur.com/qQaUzUj.jpg',
+  'https://i.imgur.com/7bvRKaj.jpg',
+  'https://i.imgur.com/elZXU7g.jpg',
+  'https://i.imgur.com/oVIVqYw.jpg'
 ];
 
 const productTypes = {
