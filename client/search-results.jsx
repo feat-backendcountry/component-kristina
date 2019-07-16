@@ -1,6 +1,7 @@
 import React from 'react';
 
 const SearchResults = (props) => {
+  console.log(props.result[0].url);
   return (
     <section className='search-results'>
       <div className='search-result-text-container'>
