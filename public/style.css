@@ -269,7 +269,7 @@
   text-align: left;
 }
 
-.search-result-images-container {
+.search-result-display-container {
   display: block;
   width: 75%;
   float: right;
@@ -279,7 +279,7 @@
   text-align: center;
 }
 
-.search-result-image-item {
+.search-result-display-item {
   display: inline-block;
   width: 185px;
   height: 220px;
@@ -287,20 +287,20 @@
   text-align: center;
 }
 
-.search-result-image {
+.search-result-display {
   display: inline-block;
   height: 160px;
   width: 160px;
   margin-bottom: 15px;
 }
 
-.search-result-image-brand {
+.search-result-display-brand {
   display: inline-block;
   width: 100%;
   font-weight: 800;
 }
 
-.search-result-image-name {
+.search-result-display-name {
   display: inline-block;
   width: 100%;
 }
