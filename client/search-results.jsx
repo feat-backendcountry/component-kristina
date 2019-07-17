@@ -6,54 +6,30 @@ const SearchResults = (props) => {
       <div className='search-result-text-container'>
         <span className='search-result-text-item'>
           <span className='query-text'>{props.query}</span>
-          <span>remaining result</span>
+          <span>{props.searchProduct.slice(props.query.length)}</span>
         </span>
         {props.searchTextItems.map((item, key) => {
           return(
-            <span className='search-result-text-item' key={key}>
-              <span>{item.name.toLowerCase()}</span>
-              <span className='search-department'>{' in ' + item.childCategory}</span>
+            <span className='search-result-text-item result-with-category' key={key}>
+              <span>{item.productType}</span>
+              <span className='search-department'>{' in ' + item.parentCategory}</span>
             </span>
           );
         })}
 
-        <span className='search-result-text-item'>----separator line-----</span>
-        <span className='search-result-text-item'>
-          <span className='query-text'>{props.query}</span>
-          <span>remaining result</span>
+        <span className='search-result-separator-container'>
+          <span className='search-result-separator'></span>
         </span>
-        <span className='search-result-text-item'>
-          <span className='query-text'>{props.query}</span>
-          <span>remaining result</span>
-        </span>
-        <span className='search-result-text-item'>
-          <span className='query-text'>{props.query}</span>
-          <span>remaining result</span>
-        </span>
-        <span className='search-result-text-item'>
-          <span className='query-text'>{props.query}</span>
-          <span>remaining result</span>
-        </span>
-        <span className='search-result-text-item'>
-          <span className='query-text'>{props.query}</span>
-          <span>remaining result</span>
-        </span>
-        <span className='search-result-text-item'>
-          <span className='query-text'>{props.query}</span>
-          <span>remaining result</span>
-        </span>
-        <span className='search-result-text-item'>
-          <span className='query-text'>{props.query}</span>
-          <span>remaining result</span>
-        </span>
-        <span className='search-result-text-item'>
-          <span className='query-text'>{props.query}</span>
-          <span>remaining result</span>
-        </span>
-        <span className='search-result-text-item'>
-          <span className='query-text'>{props.query}</span>
-          <span>remaining result</span>
-        </span>
+
+        {props.searchAutoFillSuggestions.map((item, key) => {
+          return(
+            <span className='search-result-text-item' key={key}>
+              <span className='query-text'>{props.query}</span>
+              <span>{item.slice(props.query.length)}</span>
+            </span>
+          );
+        })}
+
       </div>
 
       <div className='search-result-display-container'>
