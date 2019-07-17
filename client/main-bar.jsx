@@ -9,7 +9,9 @@ class MainBar extends React.Component {
     this.state = {
       query: '',
       searchDisplayItems: [],
-      searchTextItems: ['hello', 'there']
+      searchTextItems: [],
+      searchAutoFillSuggestions: ['shirts', 'shoes', 'shorts', 'shovel'],
+      searchProduct: 'shirts'
     };
     this.handleOnChange = this.handleOnChange.bind(this);
   };
@@ -40,7 +42,7 @@ class MainBar extends React.Component {
   displaySearch() {
     if (this.state.query.length >= 2) {
       return (
-        <SearchResult query={this.state.query} searchTextItems={this.state.searchTextItems} searchDisplayItems={this.state.searchDisplayItems}/>
+        <SearchResult query={this.state.query} searchProduct={this.state.searchProduct} searchTextItems={this.state.searchTextItems} searchAutoFillSuggestions={this.state.searchAutoFillSuggestions} searchDisplayItems={this.state.searchDisplayItems}/>
       )
     }
   }
