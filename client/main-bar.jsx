@@ -61,7 +61,7 @@ class MainBar extends React.Component {
         {/* Search */}
         <div className='search-container'>
           <span className='search-bar'>
-            <button className='search-button'></button>
+            <div className='search-button'></div>
             <input className='search-input' placeholder='Search gear & clothing' onChange={this.handleOnChange}></input>
           </span>
         </div>

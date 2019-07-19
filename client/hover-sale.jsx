@@ -17,7 +17,7 @@ class HoverSale extends React.Component {
   render() {
     const keys = Object.keys(this.state.sale);
     return (
-      <section className='hover-sale hover'>
+      <section className='hover-display hover-sale'>
         {keys.map((category, key) => {
           return (
             <div className={'category-container container-' + key} key={key}>
