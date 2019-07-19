@@ -8,7 +8,10 @@ class MainBar extends React.Component {
 
     this.state = {
       query: '',
-      result: []
+      searchDisplayItems: [],
+      searchTextItems: [],
+      searchAutoFillSuggestions: ['shirts', 'shoes', 'shorts', 'shovel'],
+      searchProduct: 'shirts'
     };
     this.handleOnChange = this.handleOnChange.bind(this);
   };
@@ -21,13 +24,15 @@ class MainBar extends React.Component {
     })
   }
 
-  get() {
+  getSearchResultImageItem() {
+    var searchDisplayItems;
+    var searchTextItems;
     axios
       .get('/products/all')
-      .then(({data}) => {
-        this.setState({
-          result: data
-        }, () => console.log(data))
+      .then(({ data }) => {
+        searchDisplayItems = data.slice(0, 8);
+        searchTextItems = data.slice(0, 3);
+        this.setState({ searchDisplayItems , searchTextItems }, () => console.log(searchDisplayItems))
       })
       .catch(() => {
         console.error('Not able to find search result');
@@ -37,13 +42,13 @@ class MainBar extends React.Component {
   displaySearch() {
     if (this.state.query.length >= 2) {
       return (
-        <SearchResult query={this.state.query} result={this.state.result}/>
+        <SearchResult query={this.state.query} searchProduct={this.state.searchProduct} searchTextItems={this.state.searchTextItems} searchAutoFillSuggestions={this.state.searchAutoFillSuggestions} searchDisplayItems={this.state.searchDisplayItems}/>
       )
     }
   }
 
   componentDidMount() {
-    this.get();
+    this.getSearchResultImageItem();
   }
 
   render() {
@@ -56,7 +61,7 @@ class MainBar extends React.Component {
         {/* Search */}
         <div className='search-container'>
           <span className='search-bar'>
-            <button className='search-button'></button>
+            <div className='search-button'></div>
             <input className='search-input' placeholder='Search gear & clothing' onChange={this.handleOnChange}></input>
           </span>
         </div>

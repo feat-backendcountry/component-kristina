@@ -11,7 +11,7 @@ class HoverBrands extends React.Component {
 
   render() {
     return (
-      <ul className='hover-brands hover'>
+      <ul className='hover-display hover-brands'>
         <div className='brands-header'>Shop Over A Thousand Brands</div>
         {this.state.brandIndex.map((index, key) => {
           return(

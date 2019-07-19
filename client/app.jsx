@@ -25,7 +25,7 @@ class App extends React.Component {
             How Kids Find Their Backcountry
           </a>
         </div>
-        <div className='app'>REST OF WEB PAGE</div>
+        <img className='static-image' src='https://i.imgur.com/rne9LJl.png' alt='static image component'/>
       </div>
     )
   }

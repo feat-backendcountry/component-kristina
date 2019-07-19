@@ -43,13 +43,18 @@
 
 .main-bar {
   display: block;
+  /* position: sticky; */
+  /* top: 33px; */
+  background: #FFF;
+  width: 100%;
   font-size: 12px;
   height: 80px;
+  /* transition: top 0.5s; */
 }
 
 /*
   ----------------------------------------
-  Company Logo - Pending
+  Company Logo
   ----------------------------------------
 */
 
@@ -68,8 +73,6 @@
   margin-top: 28px;
   margin-inline-start: 15px;
   cursor: pointer;
-  /* padding: 0px 10px 5px 10px; */
-  /* margin-block-start: 30px; top right bottom left */
 }
 
 /*
@@ -91,7 +94,6 @@
   width: 660px;
   max-width: 95%;
   margin-top: 30px;
-
   padding-left: 15px;
   background-color: #000;
   border-radius: 30px;
@@ -99,8 +101,7 @@
 
 .search-button {
   display: inline-block;
-  /* vertical-align: bottom; */
-  /* position: relative; */
+  vertical-align: middle;
   height: 18px;
   width: 18px;
   border: 0;
@@ -128,11 +129,16 @@
   display: inline-block;
   width: 650px;
   max-width: 95%;
-  /* line-height: 30px; */
+  margin-top: 5px;
+  margin-left: 6px;
   background-color: #000;
   font-size: 12px;
   border: 0;
   color: #FFF;
+}
+
+.search-input:focus {
+  outline: none;
 }
 
 /*
@@ -243,6 +249,8 @@
   background-color: #FFF;
   margin-left: 17.25%;
   text-align: center;
+  /* transition: all 5s ease-in-out; */
+  z-index: 1;
 }
 
 .search-result-text-container {
@@ -262,6 +270,10 @@
   color: #666;
 }
 
+.result-with-category {
+  margin-left: 18px;
+}
+
 .search-result-text-item {
   display: inline-block;
   width: 100%;
@@ -269,7 +281,21 @@
   text-align: left;
 }
 
-.search-result-images-container {
+.search-result-separator-container {
+  display: block;
+  text-align: center;
+}
+
+.search-result-separator {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  /* margin-top: 40px; */
+  background-color:	#C8C8C8;
+  border-radius: 3px;
+}
+
+.search-result-display-container {
   display: block;
   width: 75%;
   float: right;
@@ -279,7 +305,7 @@
   text-align: center;
 }
 
-.search-result-image-item {
+.search-result-display-item {
   display: inline-block;
   width: 185px;
   height: 220px;
@@ -287,20 +313,20 @@
   text-align: center;
 }
 
-.search-result-image {
+.search-result-display {
   display: inline-block;
   height: 160px;
   width: 160px;
   margin-bottom: 15px;
 }
 
-.search-result-image-brand {
+.search-result-display-brand {
   display: inline-block;
   width: 100%;
   font-weight: 800;
 }
 
-.search-result-image-name {
+.search-result-display-name {
   display: inline-block;
   width: 100%;
 }
@@ -316,6 +342,8 @@
   height: 60px;
   font-size: 14px;
   text-align: center;
+  /* position: sticky; */
+  /* top: 33px; */
 }
 
 .menu-item {
@@ -336,8 +364,9 @@
   ========================================
 */
 
-.hover {
+.hover-display {
   display: none;
+  /* display: block; */
   font-size: 14px;
   width: 100%;
   color: #666;
@@ -349,11 +378,13 @@
   left: 0px;
   text-align: left;
   padding-block-end: 30px;
-  /* height: 425px; */
-  /* margin-inline-start: 360px; */
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  max-height: 0;
 }
 
 .hover-brands {
+  /* display: block; */
   display: none;
   width: 100%;
   font-size: 12px;
@@ -361,55 +392,74 @@
   border-top: 1px solid;
   border-color:	#C8C8C8;
   position: absolute;
+  transition: all 0.5s ease-in-out;
+  max-height: 0;
 }
 
 .hover-activities {
+  /* display: block; */
   display: none;
   font-size: 14px;
-  height: 270px;
-  /* height: 0px; */
   width: 100%;
   text-align: center;
   color: #666;
   border-top: 1px solid;
   border-color:	#C8C8C8;
   position: absolute;
-  /* transition: height 3s ease; */
-  /* transition: all 5s ease-in-out; */
-  /* transition: all .5s ease-in-out; */
-
+  transition: all 0.5s ease-in-out;
+  max-height: 0;
 }
 
-.new-arrivals:hover > .hover-new-arrivals {
+.new-arrivals:hover .hover-new-arrivals {
   display: block;
-  /* -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease; */
-  /* height: 270px; */
+  max-height: 800px;
+}
+.brands:hover .hover-brands {
+  display: block;
+  max-height: 800px;
+}
+.activities:hover .hover-activities {
+  display: block;
+  max-height: 270px;
+}
+.women:hover .hover-women{
+  display: block;
+  max-height: 800px;
+}
+.men:hover .hover-men{
+  display: block;
+  max-height: 800px;
+}
+.kids:hover .hover-kids{
+  display: block;
+  max-height: 800px;
+}
+.sale:hover .hover-sale{
+  display: block;
+  max-height: 800px;
+}
 
+/* .new-arrivals:hover * .category-container {
+  display: inline-block;
 }
-.brands:hover > .hover-brands {
-  display: block;
+.brands:hover .hover-brands {
+  display: inline-block;
 }
-.activities:hover > .hover-activities {
-  display: block;
+.activities:hover .hover-activities {
+  display: inline-block;
 }
-.women:hover > .hover-women{
-  display: block;
+.women:hover * .category-container {
+  display: inline-block;
 }
-.men:hover > .hover-men{
-  display: block;
+.men:hover * .category-container {
+  display: inline-block;
 }
-.kids:hover > .hover-kids{
-  display: block;
+.kids:hover * .category-container {
+  display: inline-block;
 }
-.sale:hover > .hover-sale{
-  display: block;
-}
-
-.app {
-  box-shadow: inset 0 0 0 150vw rgba(0,0,0,0.5);
-  height: 800px;
-}
+.sale:hover * .category-container {
+  display: inline-block;
+} */
 
 /*
   ----------------------------------------
@@ -423,6 +473,7 @@
 
 .category-container {
   display: inline-block;
+  /* display: none; */
   vertical-align: top;
   width: 200px;
   max-width: 12%;
@@ -449,6 +500,10 @@
   font-size: 12px;
   text-align: left;
   cursor: pointer;
+}
+
+.category-item:hover {
+  color: #222;
 }
 
 .seasonal-ad {
@@ -529,7 +584,6 @@
   height: 102px;
   width: 200px;
   text-align: center;
-  z-index: 1;
   box-shadow: inset 0 0 0 150vw rgba(0,0,0,0.5);
   cursor: pointer;
 }
@@ -623,4 +677,22 @@
 
 .sale-text2 {
   font-weight: 600;
+}
+
+/*
+  ========================================
+  Static Components
+  ========================================
+*/
+
+.static-image {
+  display: block;
+  text-align: center;
+  background-size: contain;
+  width: 100%;
+  z-index: -1;
+}
+
+.menu-bar:hover ~ .static-image {
+  filter: brightness(80%);
 }

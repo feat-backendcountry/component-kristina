@@ -19,37 +19,37 @@ class MenuBar extends React.Component {
   render() {
     return (
       <div className='menu-bar'>
-        <li className='menu-item explore'>
+        <div className='menu-item explore'>
           <ul className='menu-name'>Explore</ul>
-        </li>
-        <li className='menu-item new-arrivals'>
+        </div>
+        <div className='menu-item new-arrivals'>
           <ul className='menu-name'>New Arrivals</ul>
           <HoverNewArrivals />
-        </li>
-        <li className='menu-item brands'>
+        </div>
+        <div className='menu-item brands'>
           <ul className='menu-name'>Brands</ul>
           <HoverBrands />
-        </li>
-        <li className='menu-item activities'>
+        </div>
+        <div className='menu-item activities'>
           <ul className='menu-name'>Activities</ul>
           <HoverActivities />
-        </li>
-        <li className='menu-item women'>
+        </div>
+        <div className='menu-item women'>
           <ul className='menu-name'>Women</ul>
           <HoverWomen />
-        </li>
-        <li className='menu-item men'>
+        </div>
+        <div className='menu-item men'>
           <ul className='menu-name'>Men</ul>
           <HoverMen />
-        </li>
-        <li className='menu-item kids'>
+        </div>
+        <div className='menu-item kids'>
           <ul className='menu-name'>Kids</ul>
           <HoverKids />
-        </li>
-        <li className='menu-item sale'>
+        </div>
+        <div className='menu-item sale'>
           <ul className='menu-name'>Sale</ul>
           <HoverSale />
-        </li>
+        </div>
       </div>
     )
   }
