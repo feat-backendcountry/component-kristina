@@ -50,8 +50,7 @@ class MenuBar extends React.Component {
           <ul className='menu-name'>Sale</ul>
           <HoverSale />
         </div>
-        <div className='hover-dim-background'>
-        </div>
+        <div className='hover-dim-background'></div>
       </div>
     )
   }
