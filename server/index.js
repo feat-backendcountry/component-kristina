@@ -6,7 +6,7 @@ const cors = require('cors');
 const Products = require('../database/index.js');
 
 const app = express();
-const port = 3838;
+const port = 4001;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
