@@ -211,6 +211,35 @@
   cursor: pointer;
 }
 
+.login-modal {
+  display: block;
+  text-align: center;
+  margin-left: 37.3%;
+  margin-top: 6.5%;
+  position: absolute;
+  height: 470px;
+  width: 420px;
+  background: #FFF;
+  z-index: 4;
+}
+
+.login-img {
+  display: block;
+  height: 470px;
+  width: 420px;
+}
+
+.login-modal-dim-background {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.5);
+  z-index: 3;
+}
+
 /*
   ----------------------------------------
   Checkout
@@ -358,9 +387,14 @@
   line-height: 60px;
 }
 
-/* .explore:hover:disabled {
-
-} */
+.hover-dim-background {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.5);
+  /* z-index: 1; */
+}
 /*
   ========================================
   Hover Containers - Pending
@@ -408,6 +442,18 @@
   max-height: 800px;
   padding-block-end: 30px;
 }
+
+/* .new-arrivals:hover > .hover-dim-background,
+.brands:hover > .hover-dim-background,
+.activities:hover > .hover-dim-background,
+.women:hover > .hover-dim-background,
+.men:hover > .hover-dim-background
+.kids:hover > .hover-dim-background,
+.sale:hover > .hover-dim-background{
+  display: block;
+  height: 100vh;
+  width: 100vw;
+} */
 
 /* Hover Display Content */
 
@@ -684,6 +730,6 @@
   z-index: -1;
 }
 
-.menu-bar:hover ~ .static-image {
+/* .menu-bar:hover ~ .static-image {
   filter: brightness(80%);
-}
+} */
