@@ -2,17 +2,18 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const morgan = require('morgan');
+const cors = require('cors');
 const Products = require('../database/index.js');
 
 const app = express();
-const port = 3838;
+const port = 4001;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(morgan('dev'));
 
-app.get('/products/all', (req, res) => {
+app.get('/products/all', cors(), (req, res) => {
   Products
     .find({})
     .then((data) => {

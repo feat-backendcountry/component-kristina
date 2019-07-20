@@ -11,16 +11,19 @@ class MainBar extends React.Component {
       searchDisplayItems: [],
       searchTextItems: [],
       searchAutoFillSuggestions: ['shirts', 'shoes', 'shorts', 'shovel'],
-      searchProduct: 'shirts'
+      searchProduct: 'shirts',
+      showUserModal: false
     };
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleOnClickLogin = this.handleOnClickLogin.bind(this);
+    this.handleOnClickExitLogin = this.handleOnClickExitLogin.bind(this);
   };
 
   handleOnChange(e) {
     this.setState({
       query: e.target.value
     }, () => {
-      // this.get()
+      this.getSearchResultImageItem();
     })
   }
 
@@ -28,7 +31,7 @@ class MainBar extends React.Component {
     var searchDisplayItems;
     var searchTextItems;
     axios
-      .get('/products/all')
+      .get('http://localhost:3838/products/all')
       .then(({ data }) => {
         searchDisplayItems = data.slice(0, 8);
         searchTextItems = data.slice(0, 3);
@@ -47,8 +50,29 @@ class MainBar extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.getSearchResultImageItem();
+  handleOnClickLogin(e) {
+    this.setState({
+      showUserModal: !this.state.showUserModal
+    })
+  }
+
+  handleOnClickExitLogin(e) {
+    this.setState({
+      showUserModal: false
+    })
+  }
+
+  displayUserModal() {
+    if(this.state.showUserModal) {
+      return(
+        <div>
+          <div className='login-modal-dim-background'></div>
+          <form className='login-modal' onClick={this.handleOnClickExitLogin}>
+            <img className='login-img' src='https://i.imgur.com/l3AO28f.png'/>
+          </form>
+        </div>
+      )
+    }
   }
 
   render() {
@@ -76,7 +100,7 @@ class MainBar extends React.Component {
           <span className='phone-text'>1-800-409-4502</span>
         </div>
         {/* Login */}
-        <div className='login-container'>
+        <div className='login-container' onClick={this.handleOnClickLogin}>
           <span className='login-text'>My Account</span>
           <img className='avatar-icon' src='https://i.imgur.com/Gwo5Cto.jpg' alt='user avatar'></img>
         </div>
@@ -85,6 +109,7 @@ class MainBar extends React.Component {
           <img className='cart-icon' src='https://i.imgur.com/XbqZWjn.png' alt='cart icon' />
         </div>
         {this.displaySearch()}
+        {this.displayUserModal()}
       </section>
     )
   }

@@ -211,6 +211,35 @@
   cursor: pointer;
 }
 
+.login-modal {
+  display: block;
+  text-align: center;
+  margin-left: 37.3%;
+  margin-top: 6.5%;
+  position: absolute;
+  height: 470px;
+  width: 420px;
+  background: #FFF;
+  z-index: 4;
+}
+
+.login-img {
+  display: block;
+  height: 470px;
+  width: 420px;
+}
+
+.login-modal-dim-background {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.5);
+  z-index: 3;
+}
+
 /*
   ----------------------------------------
   Checkout
@@ -249,8 +278,8 @@
   background-color: #FFF;
   margin-left: 17.25%;
   text-align: center;
-  /* transition: all 5s ease-in-out; */
-  z-index: 1;
+  transition: all 5s ease-in-out;
+  z-index: 2;
 }
 
 .search-result-text-container {
@@ -358,6 +387,14 @@
   line-height: 60px;
 }
 
+.hover-dim-background {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.5);
+  /* z-index: 1; */
+}
 /*
   ========================================
   Hover Containers - Pending
@@ -365,8 +402,7 @@
 */
 
 .hover-display {
-  display: none;
-  /* display: block; */
+  display: block;
   font-size: 14px;
   width: 100%;
   color: #666;
@@ -377,89 +413,83 @@
   top: 173px;
   left: 0px;
   text-align: left;
-  padding-block-end: 30px;
   z-index: 1;
-  transition: all 0.5s ease-in-out;
+  transition: height 0.5s ease-in;
   max-height: 0;
+  opacity: 0;
 }
 
 .hover-brands {
-  /* display: block; */
-  display: none;
-  width: 100%;
   font-size: 12px;
   text-align: center;
-  border-top: 1px solid;
-  border-color:	#C8C8C8;
-  position: absolute;
-  transition: all 0.5s ease-in-out;
-  max-height: 0;
 }
 
 .hover-activities {
-  /* display: block; */
-  display: none;
   font-size: 14px;
-  width: 100%;
   text-align: center;
   color: #666;
-  border-top: 1px solid;
-  border-color:	#C8C8C8;
-  position: absolute;
-  transition: all 0.5s ease-in-out;
-  max-height: 0;
 }
 
-.new-arrivals:hover .hover-new-arrivals {
-  display: block;
-  max-height: 800px;
-}
-.brands:hover .hover-brands {
-  display: block;
-  max-height: 800px;
-}
-.activities:hover .hover-activities {
-  display: block;
-  max-height: 270px;
-}
-.women:hover .hover-women{
-  display: block;
-  max-height: 800px;
-}
-.men:hover .hover-men{
-  display: block;
-  max-height: 800px;
-}
-.kids:hover .hover-kids{
-  display: block;
-  max-height: 800px;
-}
+/* Hover Display Background */
+.new-arrivals:hover .hover-new-arrivals,
+.brands:hover .hover-brands,
+.activities:hover .hover-activities,
+.women:hover .hover-women,
+.men:hover .hover-men,
+.kids:hover .hover-kids,
 .sale:hover .hover-sale{
-  display: block;
+  opacity: 1;
   max-height: 800px;
+  padding-block-end: 30px;
 }
 
-/* .new-arrivals:hover * .category-container {
-  display: inline-block;
+/* .new-arrivals:hover > .hover-dim-background,
+.brands:hover > .hover-dim-background,
+.activities:hover > .hover-dim-background,
+.women:hover > .hover-dim-background,
+.men:hover > .hover-dim-background
+.kids:hover > .hover-dim-background,
+.sale:hover > .hover-dim-background{
+  display: block;
+  height: 100vh;
+  width: 100vw;
+} */
+
+/* Hover Display Content */
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
-.brands:hover .hover-brands {
-  display: inline-block;
-}
-.activities:hover .hover-activities {
-  display: inline-block;
-}
-.women:hover * .category-container {
-  display: inline-block;
-}
-.men:hover * .category-container {
-  display: inline-block;
-}
-.kids:hover * .category-container {
-  display: inline-block;
-}
+
+.new-arrivals:hover * .category-container,
+.new-arrivals:hover * .seasonal-ad,
+.brands:hover * .brands-item,
+.activities:hover * .activity-container,
+.activities:hover * .other-activities-container,
+.women:hover * .category-container,
+.men:hover * .category-container,
+.kids:hover * .category-container,
 .sale:hover * .category-container {
   display: inline-block;
-} */
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+}
+
+.brands:hover * .brands-header,
+.activities:hover * .separator-container {
+  display: block;
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+}
 
 /*
   ----------------------------------------
@@ -472,13 +502,13 @@
 }
 
 .category-container {
-  display: inline-block;
-  /* display: none; */
+  display: none;
   vertical-align: top;
   width: 200px;
   max-width: 12%;
   margin-top: 35px;
   text-align: center;
+  opacity: 0;
 }
 
 .category-name {
@@ -507,13 +537,14 @@
 }
 
 .seasonal-ad {
-  display: inline-block;
+  display: none;
   vertical-align: top;
   width: 250px;
   max-width: 15%;
   margin-top: 35px;
   text-align: center;
   cursor: pointer;
+  opacity: 0;
 }
 
 .ad-photo {
@@ -549,16 +580,19 @@
 */
 
 .brands-header {
+  display: none;
   margin-top:25px;
   color: #222;
+  opacity: 0;
 }
 
 .brands-item {
-  display: inline-block;
+  display: none;
   margin-top: 30px;
   padding: 0px 11px;
   color: #666;
   cursor: pointer;
+  opacity: 0;
 }
 
 .brands-item:hover {
@@ -572,11 +606,12 @@
 */
 
 .activity-container {
-  display: inline-block;
+  display: none;
   height: 102px;
   width: 14.2%;
   text-align: center;
   margin-top: 30px;
+  opacity: 0;
 }
 
 .activity-image {
@@ -622,8 +657,9 @@
 }
 
 .separator-container {
-  display: block;
+  display: none;
   text-align: center;
+  opacity: 0;
 }
 
 .separator {
@@ -636,8 +672,9 @@
 }
 
 .other-activities-container {
-  display: block;
+  display: none;
   margin-top: 25px;
+  opacity: 0;
 }
 
 .other-activity-item {
@@ -693,6 +730,6 @@
   z-index: -1;
 }
 
-.menu-bar:hover ~ .static-image {
+/* .menu-bar:hover ~ .static-image {
   filter: brightness(80%);
-}
+} */
