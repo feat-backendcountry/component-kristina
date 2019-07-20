@@ -214,9 +214,10 @@
 .login-modal {
   display: block;
   text-align: center;
-  margin-left: 37.3%;
-  margin-top: 6.5%;
-  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
   height: 470px;
   width: 420px;
   background: #FFF;
@@ -232,11 +233,11 @@
 .login-modal-dim-background {
   display: block;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   height: 100vh;
   width: 100vw;
-  background: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.5);
   z-index: 3;
 }
 
@@ -388,12 +389,12 @@
 }
 
 .hover-dim-background {
-  display: block;
+  display: none;
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background: rgba(0,0,0,0.5);
-  /* z-index: 1; */
+  background-color: rgba(0,0,0,0.5);
+  z-index: 0;
 }
 /*
   ========================================
@@ -443,17 +444,17 @@
   padding-block-end: 30px;
 }
 
-/* .new-arrivals:hover > .hover-dim-background,
-.brands:hover > .hover-dim-background,
-.activities:hover > .hover-dim-background,
-.women:hover > .hover-dim-background,
-.men:hover > .hover-dim-background
-.kids:hover > .hover-dim-background,
-.sale:hover > .hover-dim-background{
+.new-arrivals:hover ~ .hover-dim-background,
+.brands:hover ~ .hover-dim-background,
+.activities:hover ~ .hover-dim-background,
+.women:hover ~ .hover-dim-background,
+.men:hover ~ .hover-dim-background,
+.kids:hover ~ .hover-dim-background,
+.sale:hover ~ .hover-dim-background{
   display: block;
   height: 100vh;
   width: 100vw;
-} */
+}
 
 /* Hover Display Content */
 
