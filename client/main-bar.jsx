@@ -28,7 +28,7 @@ class MainBar extends React.Component {
     var searchDisplayItems;
     var searchTextItems;
     axios
-      .get('/products/all')
+      .get('http://localhost:3838/products/all')
       .then(({ data }) => {
         searchDisplayItems = data.slice(0, 8);
         searchTextItems = data.slice(0, 3);
