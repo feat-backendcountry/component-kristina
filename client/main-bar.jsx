@@ -1,74 +1,49 @@
 import React from 'react';
-import SearchResult from './search-results.jsx';
-import axios from 'axios';
+import SearchResult from './search-results.jsx'
 
 class MainBar extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      query: '',
-      searchDisplayItems: [],
-      searchTextItems: [],
-      searchAutoFillSuggestions: ['shirts', 'shoes', 'shorts', 'shovel'],
-      searchProduct: 'shirts',
-      showUserModal: false
     };
-    this.handleOnChange = this.handleOnChange.bind(this);
-    this.handleOnClickLogin = this.handleOnClickLogin.bind(this);
-    this.handleOnClickExitLogin = this.handleOnClickExitLogin.bind(this);
   };
 
-  handleOnChange(e) {
-    this.setState({
-      query: e.target.value
-    }, () => {
-      this.getSearchResultImageItem();
-    })
-  }
-
-  getSearchResultImageItem() {
-    var searchDisplayItems;
-    var searchTextItems;
-    axios
-      .get('http://localhost:3838/products/all')
-      .then(({ data }) => {
-        searchDisplayItems = data.slice(0, 8);
-        searchTextItems = data.slice(0, 3);
-        this.setState({ searchDisplayItems , searchTextItems }, () => console.log(searchDisplayItems))
-      })
-      .catch(() => {
-        console.error('Not able to find search result');
-      })
-  }
-
   displaySearch() {
-    if (this.state.query.length >= 2) {
+    if (this.props.query.length >= 2) {
       return (
-        <SearchResult query={this.state.query} searchProduct={this.state.searchProduct} searchTextItems={this.state.searchTextItems} searchAutoFillSuggestions={this.state.searchAutoFillSuggestions} searchDisplayItems={this.state.searchDisplayItems}/>
+        <SearchResult query={this.props.query} searchProduct={this.props.searchProduct} searchTextItems={this.props.searchTextItems} searchAutoFillSuggestions={this.props.searchAutoFillSuggestions} searchDisplayItems={this.props.searchDisplayItems} />
       )
     }
   }
 
-  handleOnClickLogin(e) {
-    this.setState({
-      showUserModal: !this.state.showUserModal
-    })
-  }
-
-  handleOnClickExitLogin(e) {
-    this.setState({
-      showUserModal: false
-    })
+  displaySearchBackground() {
+    if (this.props.query.length >= 2) {
+      return (
+        <div className='search-result-dim-background'></div>
+      )
+    }
   }
 
   displayUserModal() {
-    if(this.state.showUserModal) {
-      return(
+    if (this.props.showUserModal) {
+      return (
         <div>
-          <div className='login-modal-dim-background'></div>
-          <form className='login-modal' onClick={this.handleOnClickExitLogin}>
-            <img className='login-img' src='https://i.imgur.com/l3AO28f.png'/>
+          <div className='login-modal-dim-background' onClick={this.props.handleOnClickExitLogin}></div>
+          <form className='login-modal'>
+            <div className='login-modal-exit-icon-container' onClick={this.props.handleOnClickExitLogin}>
+              <img className='login-modal-exit-icon' src='https://i.imgur.com/5hLFahj.png' alt='exit icon' />
+            </div>
+            <div className='login-modal-container'>
+              <img className='login-modal-logo' src='https://i.imgur.com/kXI8mh7.png' alt='company logo'/>
+            </div>
+            <div className='login-modal-text'>Email</div>
+            <input className='login-modal-input' autoFocus='autofocus' onFocus='this.select()'></input>
+            <div className='login-modal-text'>Password</div>
+            <input className='login-modal-input' type='password'></input>
+            <a className='login-forgot'>Forgot?</a>
+            <button className='login-button'>Sign In</button>
+            <a className='login-new-account'>Create an Account</a>
           </form>
         </div>
       )
@@ -86,7 +61,7 @@ class MainBar extends React.Component {
         <div className='search-container'>
           <span className='search-bar'>
             <div className='search-button'></div>
-            <input className='search-input' placeholder='Search gear & clothing' onChange={this.handleOnChange}></input>
+            <input className='search-input' placeholder='Search gear & clothing' onChange={this.props.handleOnChange}></input>
           </span>
         </div>
         {/* Chat */}
@@ -100,7 +75,7 @@ class MainBar extends React.Component {
           <span className='phone-text'>1-800-409-4502</span>
         </div>
         {/* Login */}
-        <div className='login-container' onClick={this.handleOnClickLogin}>
+        <div className='login-container' onClick={this.props.handleOnClickLogin}>
           <span className='login-text'>My Account</span>
           <img className='avatar-icon' src='https://i.imgur.com/Gwo5Cto.jpg' alt='user avatar'></img>
         </div>
@@ -109,6 +84,7 @@ class MainBar extends React.Component {
           <img className='cart-icon' src='https://i.imgur.com/XbqZWjn.png' alt='cart icon' />
         </div>
         {this.displaySearch()}
+        {this.displaySearchBackground()}
         {this.displayUserModal()}
       </section>
     )
