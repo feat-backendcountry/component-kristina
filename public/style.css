@@ -20,7 +20,9 @@
 .shipping-bar {
   background-color:#DDC9A3;
   height: 33px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100vw;
   text-align: center;
 }
 
@@ -43,8 +45,8 @@
 
 .main-bar {
   display: block;
-  /* position: sticky; */
-  /* top: 33px; */
+  position: fixed;
+  top: 33px;
   background: #FFF;
   width: 100%;
   font-size: 12px;
@@ -220,14 +222,99 @@
   position: fixed;
   height: 470px;
   width: 420px;
+  text-align: center;
   background: #FFF;
-  z-index: 4;
+  z-index: 6;
 }
 
-.login-img {
-  display: block;
-  height: 470px;
-  width: 420px;
+.login-modal-exit-icon-container {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+
+.login-modal-exit-icon {
+  display: inline-block;
+  height: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.login-modal-logo-container {
+  display: inline-block;
+  width: 300px;
+  text-align: center;
+}
+
+.login-modal-logo {
+  display: inline-block;
+  width: 75px;
+}
+
+.login-modal-text {
+  display: inline-block;
+  height: 20px;
+  width: 320px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.login-modal-input {
+  display: inline-block;
+  height: 28px;
+  width: 320px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid #C8C8C8;
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+.login-modal-input-select {
+  border-color: #222;
+}
+
+.login-modal-input:focus {
+  outline: none;
+  border: 1px solid #222;
+}
+
+.login-forgot {
+  display: inline-block;
+  width: 320px;
+  font-size: 12px;
+  color: #222;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-button {
+  display: inline-block;
+  width: 300px;
+  height: 35px;
+  margin-top: 40px;
+  background-color: #000;
+  color: #FFF;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-button:focus {
+  outline: none;
+}
+
+.login-new-account {
+  display: inline-block;
+  width: 320px;
+  font-size: 14px;
+  margin-top: 20px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .login-modal-dim-background {
@@ -237,8 +324,8 @@
   left: 0px;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 3;
+  background-color: rgba(30,30,30,0.4);
+  z-index: 5;
 }
 
 /*
@@ -280,7 +367,7 @@
   margin-left: 17.25%;
   text-align: center;
   transition: all 5s ease-in-out;
-  z-index: 2;
+  z-index: 4;
 }
 
 .search-result-text-container {
@@ -361,6 +448,16 @@
   width: 100%;
 }
 
+.search-result-dim-background {
+  display: block;
+  position: fixed;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(30,30,30,0.4);
+  z-index: 3;
+}
+
 /*
   ========================================
   Menu Section
@@ -369,10 +466,12 @@
 
 .menu-bar {
   display: block;
+  margin-top: 113px;
+  position: static;
   height: 60px;
   font-size: 14px;
   text-align: center;
-  /* position: sticky; */
+  /* position: relative; */
   /* top: 33px; */
 }
 
@@ -393,8 +492,8 @@
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 0;
+  background-color: rgba(30,30,30,0.4);
+  z-index: 1;
 }
 /*
   ========================================
@@ -414,7 +513,7 @@
   top: 173px;
   left: 0px;
   text-align: left;
-  z-index: 1;
+  z-index: 2;
   transition: height 0.5s ease-in;
   max-height: 0;
   opacity: 0;
@@ -620,7 +719,7 @@
   height: 102px;
   width: 200px;
   text-align: center;
-  box-shadow: inset 0 0 0 150vw rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 0 150vw rgba(30,30,30,0.4);
   cursor: pointer;
 }
 
@@ -700,6 +799,7 @@
   background: url(https://i.imgur.com/f5Z12ND.jpg);
   background-size: cover;
   background-position-y: -780px;
+  /* position: relative; */
   padding: 17px;
   cursor: pointer;
 }
