@@ -8,10 +8,28 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      data: [],
       query: '',
-      searchProduct: 'shirts',
+      searchProduct: '',
       searchTextItems: [],
-      searchAutoFillSuggestions: ['shirts', 'shoes', 'shorts', 'shovel'],
+      searchAutoFillSuggestions: [
+        'shirt',
+        'shoes',
+        'shorts',
+        'shorts womens',
+        'shoes men',
+        'shirts jackets',
+        'shelters',
+        'helmet',
+        'headlamps',
+        'headbands',
+        'henley',
+        'hex',
+        'backpacks',
+        'backcountry',
+        'backpacking tents',
+        'backpacks womens'
+      ],
       searchDisplayItems: [],
       allowHover: true,
       showUserModal: false
@@ -26,7 +44,7 @@ class App extends React.Component {
       query: e.target.value
     }, () => {
       this.toggleAllowHover();
-      this.getSearchResultImageItem();
+      this.getSearchResultImageItems(this.state.data);
     })
   }
 
@@ -42,19 +60,33 @@ class App extends React.Component {
     }
   }
 
-  getSearchResultImageItem() {
-    var searchDisplayItems;
-    var searchTextItems;
+  getAll() {
     axios
       .get('http://localhost:4001/products/all')
       .then(({ data }) => {
-        searchDisplayItems = data.slice(0, 8);
-        searchTextItems = data.slice(0, 3);
-        this.setState({ searchDisplayItems, searchTextItems }, () => console.log(searchDisplayItems))
+        this.setState({ data })
       })
       .catch(() => {
         console.error('Not able to find search result');
       })
+  }
+
+  getSearchResultImageItems(data) {
+    var results = [];
+    var searchDisplayItems = [];
+    var searchTextItems = [];
+    var searchProduct = '';
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].productType.slice(0, this.state.query.length) === this.state.query) {
+        results.push(data[i]);
+      }
+    }
+    searchDisplayItems = results.slice(0, 8);
+    searchTextItems = results.slice(0, 3);
+    if (results.length > 0) {
+      searchProduct = results[0].productType;
+    }
+    this.setState({ searchDisplayItems, searchTextItems, searchProduct })
   }
 
   handleOnClickLogin(e) {
@@ -71,6 +103,30 @@ class App extends React.Component {
     }, () => {
       this.toggleAllowHover();
     })
+  }
+
+  // styleSearchBar() {
+  //   var mainBar = document.getElementsByClassName('main-bar')[0];
+  //   var shippingBar = document.getElementsByClassName('shipping-bar')[0];
+  //   var prevScrollpos = window.pageYOffset;
+  //   window.onscroll = function () {
+  //     var currentScrollPos = window.pageYOffset;
+  //     if(currentScrollPos >= 33) {
+  //       mainBar.position = 'fixed';
+  //       if (prevScrollpos > currentScrollPos) {
+  //         mainBar.style.top = '0';
+  //       } else {
+  //         mainBar.style.top = '-113px';
+  //         shippingBar.style.display = 'none';
+  //       }
+  //       prevScrollpos = currentScrollPos;
+  //     }
+  //   }
+  // }
+
+  componentDidMount() {
+    this.getAll();
+    // this.styleSearchBar();
   }
 
   render() {
