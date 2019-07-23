@@ -24,6 +24,7 @@
   top: 0;
   width: 100vw;
   text-align: center;
+  /* transition: top 0.5s; */
 }
 
 .shipping-text {
@@ -36,6 +37,11 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+/* .scrolled {
+  background-color: red;
+  color: red;
+} */
 
 /*
   ========================================
@@ -51,7 +57,8 @@
   width: 100%;
   font-size: 12px;
   height: 80px;
-  /* transition: top 0.5s; */
+  width: 100%;
+  transition: top 0.3s;
 }
 
 /*
