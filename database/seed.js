@@ -7,7 +7,7 @@ const descriptions = [
   'Icelandic ',
   'Wilshire',
   'Mosaic Trident',
-  'Peak Performance Odyssey',
+  'Peak Performance',
   'Hyper Blaze IC',
   'Condor',
   'Esk Forge',

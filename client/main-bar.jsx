@@ -38,7 +38,7 @@ class MainBar extends React.Component {
               <img className='login-modal-logo' src='https://i.imgur.com/kXI8mh7.png' alt='company logo'/>
             </div>
             <div className='login-modal-text'>Email</div>
-            <input className='login-modal-input' autoFocus='autofocus' onFocus='this.select()'></input>
+            <input className='login-modal-input' autoFocus='autofocus' type='email' onFocus='this.select()'></input>
             <div className='login-modal-text'>Password</div>
             <input className='login-modal-input' type='password'></input>
             <a className='login-forgot'>Forgot?</a>

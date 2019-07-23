@@ -12,7 +12,7 @@ const SearchResults = (props) => {
           return (
             <span className='search-result-text-item result-with-category' key={key}>
               <span>{item.productType}</span>
-              <span className='search-department'>{' in ' + item.parentCategory}</span>
+              <span className='search-department'>{' in ' + item.childCategory}</span>
             </span>
           );
         })}

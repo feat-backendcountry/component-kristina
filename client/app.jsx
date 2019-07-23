@@ -62,7 +62,7 @@ class App extends React.Component {
 
   getAll() {
     axios
-      .get('http://localhost:4001/products/all')
+      .get('products/all')
       .then(({ data }) => {
         this.setState({ data })
       })
@@ -153,7 +153,7 @@ class App extends React.Component {
             How Kids Find Their Backcountry
           </a>
         </div>
-        <img className='static-image' src='https://i.imgur.com/rne9LJl.png' alt='static image component' />
+        {/* <img className='static-image' src='https://i.imgur.com/rne9LJl.png' alt='static image component' /> */}
       </div>
     )
   }
